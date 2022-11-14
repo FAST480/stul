@@ -85,6 +85,7 @@ body {
   left: 0;
   background: #262626;
   z-index: 5;
+  pointer-events: none;
 }
 .preloader img {
   position: absolute;
@@ -125,7 +126,103 @@ body {
     left: 50px;
   }
 }
+@-webkit-keyframes preloader__imgAnim {
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotateY(180deg);
+    width: 500px;
+  }
+  20% {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotateY(180deg);
+    width: 500px;
+  }
+  100% {
+    width: 42px;
+    transform: translateX(0) translateY(0) rotateY(180deg);
+    top: 11px;
+    left: 50px;
+  }
+}
+@-moz-keyframes preloader__imgAnim {
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotateY(180deg);
+    width: 500px;
+  }
+  20% {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotateY(180deg);
+    width: 500px;
+  }
+  100% {
+    width: 42px;
+    transform: translateX(0) translateY(0) rotateY(180deg);
+    top: 11px;
+    left: 50px;
+  }
+}
+@-o-keyframes preloader__imgAnim {
+  0% {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotateY(180deg);
+    width: 500px;
+  }
+  20% {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotateY(180deg);
+    width: 500px;
+  }
+  100% {
+    width: 42px;
+    transform: translateX(0) translateY(0) rotateY(180deg);
+    top: 11px;
+    left: 50px;
+  }
+}
 @keyframes preloaderAnim {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@-webkit-keyframes preloaderAnim {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@-moz-keyframes preloaderAnim {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+@-o-keyframes preloaderAnim {
   0% {
     opacity: 1;
   }
@@ -139,13 +236,22 @@ body {
 }
 .done {
   animation: 1s preloaderAnim forwards linear;
+  -webkit-animation: 1s preloaderAnim forwards linear;
+  -moz-animation: 1s preloaderAnim forwards linear;
+  -o-animation: 1s preloaderAnim forwards linear;
   animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  -o-animation-delay: 1.5s;
 }
 .done .preloader__gif {
   opacity: 0;
 }
 .done img {
   animation: 1.5s preloader__imgAnim forwards linear;
+  -webkit-animation: 1.5s preloader__imgAnim forwards linear;
+  -moz-animation: 1.5s preloader__imgAnim forwards linear;
+  -o-animation: 1.5s preloader__imgAnim forwards linear;
 }
 .nav {
   padding: 5px 0px;
@@ -209,6 +315,7 @@ body {
   height: 100%;
   background-color: rgba(15, 15, 15, 0.8);
   z-index: 0;
+  pointer-events: none;
 }
 .header__body {
   position: relative;
