@@ -91,7 +91,8 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: rotateY(180deg) translateX(50%) translateY(-50%);
+  transform: translateX(50%) translateY(-50%) rotateY(180deg);
+  -webkit-transform: translateX(50%) translateY(-50%) rotateY(180deg);
   width: 500px;
 }
 .preloader__gif {
@@ -131,17 +132,20 @@ body {
     top: 50%;
     left: 50%;
     -webkit-transform: translateX(-50%) translateY(-50%) rotateY(180deg);
+    transform: translateX(-50%) translateY(-50%) rotateY(180deg);
     width: 500px;
   }
   20% {
     top: 50%;
     left: 50%;
     -webkit-transform: translateX(-50%) translateY(-50%) rotateY(180deg);
+    transform: translateX(-50%) translateY(-50%) rotateY(180deg);
     width: 500px;
   }
   100% {
     width: 42px;
     -webkit-transform: translateX(0%) translateY(0%) rotateY(180deg);
+    transform: translateX(0%) translateY(0%) rotateY(180deg);
     top: 11px;
     left: 50px;
   }
